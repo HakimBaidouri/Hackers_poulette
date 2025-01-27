@@ -23,31 +23,38 @@
             <label for="name">
                 <input type="text" id="name" name="name" class="input" placeholder="" required>
                 <span>Name</span>
+                <span class="message" style="margin:0; color: red; white-space: nowrap;"></span>
             </label>
-            
             <label for="firstName">
                 <input type="text" id="firstName" name="firstName" class="input" placeholder="" required>
                 <span>Firstname</span>
+                <span class="message" style="margin:0; color: red; white-space: nowrap;"></span>
             </label>
         </div>
         
         <label for="mail">
             <input type="mail" id="mail" name="mail" class="input" placeholder="" required>
             <span>Email</span>
+            <span class="message" style="margin:0; color: red; white-space: nowrap;"></span>
         </label>
         
         <label for="url">
-            <input type="url" id="url" name="url" placeholder="" class="input" required>
+            <input type="text" id="url" name="url" placeholder="" class="input" required>
             <span>Enter the image URL</span>
+            <span class="message" style="margin:0; color: red; white-space: nowrap;"></span>
         </label>
         
         <label for="description">
             <input type="text" id="description" name="description" class="input" placeholder="" required>
             <span>Description</span>
+            <span class="message" style="margin:0; color: red; white-space: nowrap;"></span>
         </label>
+
+        <div class="h-captcha" data-sitekey="e65674e6-46d4-4b52-960c-64a4e81c3350"></div>
         
         <button class="submit" type="submit">Submit</button>
     </form>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     <script src="js/script.js"></script> 
 </body>
 </html>

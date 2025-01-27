@@ -1,6 +1,22 @@
 <?php
 require "DB_connection.php";
 
+// Récupérer la réponse hCaptcha envoyée par le formulaire
+$hCaptchaResponse = $_POST['h-captcha-response'];
+$hCaptchaSecretKey = "e65674e6-46d4-4b52-960c-64a4e81c3350"; // Remplace par ta clé secrète
+
+// Vérifier la réponse hCaptcha avec l'API hCaptcha
+$verifyUrl = "https://hcaptcha.com/siteverify";
+$response = file_get_contents($verifyUrl . "?secret=" . $hCaptchaSecretKey . "&response=" . $hCaptchaResponse);
+$responseKeys = json_decode($response, true);
+
+// Si la validation échoue mais on ne va pas le faire car on travaille en local
+// if (intval($responseKeys["success"]) !== 1) {
+//     print_r($responseKeys);
+//     echo "CAPTCHA validation failed. Please try again.";
+//     exit;
+// }
+
 $name = $_POST['name'];
 $firstName = $_POST['firstName'];
 $mail = $_POST['mail'];

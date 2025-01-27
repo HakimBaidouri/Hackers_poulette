@@ -146,18 +146,28 @@ img, picture, video, canvas {
     font-size: 0.9em;
   }
   
-  .form label .input:focus + span,.form label .input:valid + span {
-    margin: 0;
-    padding: 0;
-    top: 30px;
-    font-size: 0.7em;
-    font-weight: 600;
-  }
-  
-  .form label .input:valid + span {
-    color: green;
-  }
-  
+  /* Quand l'input est en focus */
+.form label .input:focus + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+/* Quand l'input est valide */
+.form label .input:valid + span, .form label .input:invalid{
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+/* Quand l'input est invalide */
+/* .form label .input:invalid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: red;
+} */
+
   .submit {
     border: none;
     outline: none;
