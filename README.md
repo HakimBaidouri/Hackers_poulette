@@ -28,11 +28,6 @@ This project is a **secure contact form** that allows users to submit inquiries 
 - **hCaptcha**: Stops bots from submitting spam.
 - **Server-Side Validation**: Ensures only valid data is accepted.
 
-## Future Improvements 🔮
-- Add **email notifications** for new submissions.
-- Implement **file upload support** with secure validation.
-- Improve **UI/UX** with animations and responsiveness.
-
 ---
 
 This project helped me strengthen my understanding of **web security, form validation, and API integration**. 🚀
